@@ -5,9 +5,9 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Jobposters</h1>
+  <h1>Jobs List</h1>
 
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>First name</th>
@@ -30,11 +30,11 @@
           <td><%= jobposter.email %></td>
           <td><%= jobposter.user_id %></td>
           
-          <td><%= link_to 'Show', jobposter %></td>
+          <td><%= link_to 'View Job', jobposter %></td>
 
           <% if jobposter.user == current_user %>
           <td><%= link_to 'Edit', edit_jobposter_path(jobposter) %></td>
-          <td><%= link_to 'Destroy', jobposter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', jobposter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% else %>
 
           <% end %>
@@ -45,7 +45,7 @@
 
   <br>
 
-  <%= link_to 'New Jobposter', new_jobposter_path %>
+  <%= link_to 'New Job', new_jobposter_path %>
 <% else %>
 
 <h4> hello </h4>
